@@ -15,16 +15,16 @@ public class MainNgaClass {
         get("/landingpage", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             
-            model.put("title","Tepen's Inventory Web App");
+            model.put("title","Javadings' Inventory Web App");
             model.put("message", "Halu!");
-            model.put("brand", "Tepen's Backpacking");
+            model.put("brand", "Javadings' Backpacking");
             model.put("button", "Sign in");
            
            	model.put("button1", "Add");
             model.put("button2", "Remove");
             model.put("button3", "Replace");
             
-            model.put("descrp", "This is Tepen's Inventory Web App where everything is in your Backpack.");
+            model.put("descrp", "This is Javadings' Inventory Web App where everything is in your Backpack.");
             model.put("add_item", "Add");
             model.put("add_descrp", "Click here to add an item to your backpack.");
             
