@@ -10,9 +10,9 @@ import static spark.Spark.*;
 public class MainNgaClass {
 
     public static void main(String[] args) {
-        staticFiles.location("~/Desktop/oop/html/css"); // Static files
+        staticFiles.location("/public"); // Static files
         
-        get("/landing", (req, res) -> {
+        get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             
             model.put("title","Pick&Pack");
@@ -24,12 +24,6 @@ public class MainNgaClass {
        }, new FreeMarkerEngine());
     
 
-get("/", (request, response) -> {
-
-    return "<h1>hello world123testing</h1>";
-
-    
-});
 
 
 get("/formFieldWBootstrap", (request, response) -> {
