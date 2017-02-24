@@ -25,7 +25,7 @@
 <div class="btn-group" role="group" aria-label="...">
   
   	<button type="button" class="btn btn-default">
-  		<a href="/landing.ftl">
+  		<a href="/landing">
   			Back to Homepage
   		</a>
   	</button>
