@@ -22,10 +22,24 @@
 <h2>Item:${item_name}</h2>
 <h2>Item Details:${item_details}</h2>
 
+<div class="btn-group" role="group" aria-label="...">
+  
+  	<button type="button" class="btn btn-default">
+  		<a href="/landing.ftl">
+  			Back to Homepage
+  		</a>
+  	</button>
+</div>
+
 
 
   </div>
-  <div class="col-md-4"></div>
+  <div class="col-md-4"> 	
+</div>
+
+
+
+
 
 </body>
 </html>
