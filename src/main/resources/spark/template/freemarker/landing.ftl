@@ -127,7 +127,7 @@
   <center><img src="http://www.pngall.com/wp-content/uploads/2016/09/Scale-PNG-Clipart.png" alt="Cinque Terre" style="width:50%"></center>
   <div class="w3-container">
 
-  <h3>Enjoy real-time, detailed visibility into key inventory control and supply chain management measures, including inventory trends, stock on order and supplier on-time performance.</h3>
+  <h3>Balance in All Things</h3>
   <p>Pick&Pack saves any distribution countless hours of work associated with data entry, organization and fulfillment. You'll be able to convert leads to orders, orders to shipments, and shipments to revenue in short order.</p>
 
   </div>
