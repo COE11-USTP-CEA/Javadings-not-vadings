@@ -45,7 +45,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>/home/stephen/Desktop/sparkJava/main/java/MainNgaClass</mainClass>
+                    <mainClass>com.sample.sparkdemo.MainNgaClass</mainClass>
                 </configuration>
             </plugin>
         </plugins>
