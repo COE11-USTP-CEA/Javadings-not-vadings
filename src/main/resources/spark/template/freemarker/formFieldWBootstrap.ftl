@@ -30,11 +30,21 @@
     <input type="details" name="Item1Details" class="form-control" id="InputItemDetails" placeholder="Details">
   </div>
  
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">
+    Submit
+  </button>
 </form>
 
+<button type="submit" class="btn btn-default">
+    <a href="/">
+        Back to Homepage
+      </a>
+  </button>
+</form>
 
-  </div>
+<div class="btn-group" role="group" aria-label="...">
+  
+
   <div class="col-md-4"></div>
 
 </body>
