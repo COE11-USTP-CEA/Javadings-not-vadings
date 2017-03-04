@@ -28,7 +28,7 @@
   <a href="/add" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add items</a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Delete items</a>
   
-  <a href="/view" class="w3-bar-item w3-button w3-hide-small w3-hover-white">View Items</a>
+  <a href="/testinglang" class="w3-bar-item w3-button w3-hide-small w3-hover-white">View Items</a>
  <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
   </div>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>

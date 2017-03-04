@@ -1,5 +1,6 @@
 package com.sample.sparkdemo.model;
 import java.util.ArrayList;
+import java.util.*;
 
 public class Item {
 	String name, code;
