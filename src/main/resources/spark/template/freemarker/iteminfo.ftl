@@ -11,7 +11,7 @@
 <body>
 
 <div class="text-center">
-<h1>Item info</h1>
+<h1>You have just added a new item</h1>
 </div>
 
 
@@ -19,8 +19,8 @@
   <div class="col-md-4"></div>
   <div class="col-md-4">
     
-<h2>Item:${item_name}</h2>
-<h2>Item Details:${item_details}</h2>
+<h2>Item: ${item_name}</h2>
+<h2>Item Details: ${item_details}</h2>
 
 <div class="btn-group" role="group" aria-label="...">
   
@@ -31,6 +31,14 @@
   	</button>
 </div>
 
+<div class="btn-group" role="group" aria-label="...">
+  
+    <button type="button" class="btn btn-default">
+      <a href="/">
+        View items list
+      </a>
+    </button>
+</div>
 
 
   </div>

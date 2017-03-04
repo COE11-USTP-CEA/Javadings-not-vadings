@@ -25,30 +25,20 @@
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-opennav w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="/" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>${title}</a>
-  <a href="/formFieldWBootstrap" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add items</a>
+  <a href="/add" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add items</a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Delete items</a>
   
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">View Items</a>
- <a href="#About Us" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+  <a href="/view" class="w3-bar-item w3-button w3-hide-small w3-hover-white">View Items</a>
+ <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
   </div>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
-  </div>
-</div>
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
   <img src="header.jpg" alt="boat" style="width:100%;min-height:350px;max-height:700px;">
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Pick&Pack</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-red" title="Go To W3.CSS">Pick&Pack</button>
   </div>
 </div>
 
@@ -71,15 +61,16 @@
 </div>
 
 <!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>Meet the Team</h2>
+  <div class="w3-container w3-padding-64 w3-center" id="about">
+  <h2>Meet the Team</h2>
 
-<div class="w3-row"><br>
+  <div class="w3-row"><br>
 
-<div class="w3-quarter">
-  <img src="pearl.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Pearl</h3>
-</div>
+  <div class="w3-quarter">
+    <img src="pearl.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Pearl</h3>
+  </div>
+</section>
 
 <div class="w3-quarter">
   <img src="brick.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
