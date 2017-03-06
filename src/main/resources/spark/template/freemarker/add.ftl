@@ -20,7 +20,7 @@
   <div class="col-md-4">
     
 
-<form method = "post" action="/create">
+<form method = "post" action="/add">
   <div class="form-group">
     <label for="exampleInputItem1">Name of Item</label>
     <input type="nameofitem" name="Item1" class="form-control" id="InputItemName" placeholder="Item">
