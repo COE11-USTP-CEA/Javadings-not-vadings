@@ -22,12 +22,12 @@
 
 <form method = "post" action="/add">
   <div class="form-group">
-    <label for="exampleInputItem1">Name of Item</label>
-    <input type="nameofitem" name="Item1" class="form-control" id="InputItemName" placeholder="Item">
+    <label for="exampleInputCode">Item Code</label>
+    <input type="code" name="code" class="form-control" id="item_code" placeholder="Enter item code">
   </div>
   <div class="form-group">
-    <label for="exampleInputDetails1">Additional Details</label>
-    <input type="details" name="Item1Details" class="form-control" id="InputItemDetails" placeholder="Details">
+    <label for="exampleInputName">Item Name</label>
+    <input type="name" name="name" class="form-control" id="item_name" placeholder="Enter Item name">
   </div>
  
   <button type="submit" class="btn btn-default">
