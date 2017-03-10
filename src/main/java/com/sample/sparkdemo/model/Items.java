@@ -1,35 +1,24 @@
 package com.sample.sparkdemo.model;
-import com.sample.sparkdemo.model.Item;
-
 import java.util.ArrayList;
 
-public class Items {
-	// String name, code;
+public class Item {
+	public String name, code;
 
-	public static ArrayList<Item> items = new ArrayList<Item>();
 
-	public static ArrayList<Item> all(){
-		return items;
+	public void setName(String name){
+		this.name = name;
 	}
 
-	public static void listAll(){
-		for (Item item : items) {
-			System.out.println("item name:" + item.name);
-			System.out.println("item code:" + item.code);
+	public String name(){
+			return this.name;
 		}
+	
+
+	public String code(){
+		return this.code;
 	}
 
-	public static void putItem(Item item){
-		items.add(item);
+	public void setCode(String code){
+		this.code = code;
 	}
-
-	public static Item findItemByCode(String code){
-		for (Item item : items ) {
-			if ( code.equals(item.code) ) {
-				return item;
-			}
-		};
-		return null;
-	}
-
 }
