@@ -1,8 +1,7 @@
 package com.sample.sparkdemo;
 
 import com.sample.sparkdemo.model.Item;
-import com.sample.sparkdemo.model.Items;
-
+import com.sample.sparkdemo.model.Inventory;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.*;
@@ -13,106 +12,121 @@ import static spark.Spark.*;
 
 public class MainNgaClass {
 
+    public static String render( Map<String, Object> model, String template){
+        return new FreeMarkerEngine().render( new ModelAndView(model, template) );
+    };   
+
     public static void main(String[] args) {
         staticFiles.location("/public"); // Static files
+
+        Inventory inventory = new Inventory();
         
-		Items items = new Items();
-		
-        get("/testinglang", (req, res) -> {
-            Item item = new Item();
-            item.setName("pepsi");
-            item.setCode("p");
 
-            Items.putItem(item);
-            //Item.all();
-
-            item = new Item();
-            item.setName("coke");
-            item.setCode("c");
-
-            Items.putItem(item);
-
-            Map<String, Object> model = new HashMap<>();
-
-            model.put("title", "testing lang");
-            model.put("items", Items.all());
-            model.put("founditem",Items.findItemByCode("p"));
-           
-            
-            return new ModelAndView(model, "testinglang.ftl"); // located in src/test/resources/spark/template/freemarker
-       
-           
-       }, new FreeMarkerEngine());
-    
+         
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-
             
             model.put("title","Pick&Pack");
-           
             
-            return new ModelAndView(model, "landing.ftl"); // located in src/test/resources/spark/template/freemarker
-       
-           
-       }, new FreeMarkerEngine());
+            return render(model, "landing.ftl");
+        });
     
-
-
 
         get("/add", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("title", "Add New Items");
-            return new ModelAndView(model, "add.ftl");
-        }, new FreeMarkerEngine());
+            model.put("title", "Add New Item to Inventory");
+            return render(model, "add.ftl");
+        });
 
-        /*get("/view/:code", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            model.put("title", "Add New Items");
-            model.put("founditem", Item.findItemByCode(request.params(":code")));
-            return new ModelAndView(model, "view.ftl");
-        }, new FreeMarkerEngine()); *///penya
-		
-		get("/list", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            model.put("title", "List Items");
-            model.put("items", Items.all());
-            return new ModelAndView(model, "list.ftl");
-        }, new FreeMarkerEngine());
-		
-		post("/add", (req,res) -> {
-                String code;
-                String name;
 
+        post("/add", (request,response) -> {
             Map<String, Object> model = new HashMap<>();
-                code = req.queryParams("code");
-                name = req.queryParams("name");
+            String code = request.queryParams("code");
+            String name = request.queryParams("name");
 
             Item item = new Item();
             item.setCode(code);
             item.setName(name);
 
-            Items.putItem(item);
+            inventory.add(item);
 
-            
-            // model.put("code", code);
-            // model.put("name", name);
+            model.put("title", "Show Item");
             model.put("item", item);
-            return new ModelAndView(model, "show.ftl");
-        }, new FreeMarkerEngine());
-		
+            // response.redirect("/show/"+code);
+            // return "";
+            return render(model, "show.ftl");
+        });
 
-        post("/create", (req,res) -> {
-                String from_input1;
-                String from_input2;
 
-            Map<String, Object> model = new HashMap<>();
-                from_input1 = req.queryParams("Item1");
-                from_input2 = req.queryParams("Item1Details");
+        // get("/delete/:code", (request, response) -> {
+        //     Map<String, Object> model = new HashMap<>();
+        //     String code = request.params(":code");
+        //     Item item = inventory.deleteItemByCode(code);
             
-            model.put("item_name", from_input1);
-            model.put("item_details", from_input2);
-            return new ModelAndView(model, "iteminfo.ftl");
-        }, new FreeMarkerEngine());
+        //     model.put("title", "Delete Item");
+        //     model.put("item_code", item.code());
+        //     model.put("item_name", item.name());
+        //     return render(model, "delete.ftl");
+        // });
+
+        get("/delete/:code", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.params(":code");
+            Item item = inventory.findItemByCode(code);
+            
+            model.put("title", "Delete Item");
+            model.put("item", item);
+            // model.put("searchcode", code);
+            // model.put("founditem", item);
+            return render(model, "delete.ftl");
+        });
+
+        post("/delete", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.queryParams("code");
+            Item item = inventory.findItemByCode(code);
+            inventory.deleteItemByCode(code);
+            
+            model.put("title", "Deleted Item");
+            model.put("item", item);
+            return render(model, "deleted.ftl");
+        });
+
+
+
+
+        get("/edit/:code", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.params(":code");
+            Item item = inventory.findItemByCode(code);
+            
+            model.put("title", "Edit Item");
+            model.put("item_code", item.code());
+            model.put("item_name", item.name());
+            return render(model, "edit.ftl");
+        });
+
+
+        get("/show/:code", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.params(":code");
+            Item item = inventory.findItemByCode(code);
+            
+            model.put("title", "Show Item");
+            model.put("item", item);
+            // model.put("searchcode", code);
+            // model.put("founditem", item);
+            return render(model, "show.ftl");
+        });
+
+
+        get("/list", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("title", "List Inventory");
+            model.put("inventory", inventory.all());
+            return render(model, "list.ftl");
+        });
+
 
     }
 
