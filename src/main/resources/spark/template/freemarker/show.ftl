@@ -12,8 +12,8 @@
   <div class="col-md-4"></div>
   <div class="col-md-4">
     
-<h2>Item code: ${item.code()}</h2>
-<h2>Item Name: ${item.name()}</h2>
+<h2>Item code: ${item.code}</h2>
+<h2>Item Name: ${item.name}</h2>
 
 <div class="btn-group" role="group" aria-label="...">
   

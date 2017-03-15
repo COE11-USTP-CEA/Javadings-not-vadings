@@ -22,17 +22,17 @@
 		<tbody>
 	 		<#list inventory as item>
 				<tr>
-					<td>${item.code()}</td>
-					<td>${item.name()}</td>
+					<td>${item.code}</td>
+					<td>${item.name}</td>
 					<td>
   							<button type="button" class="btn btn-default">
-  							<a href="/show/${item.code()}">Show</a>	
+  							<a href="/show/${item.code}">Show</a>	
   							</button>
 						</div>
 					</td>
 					<td>
   							<button type="button" class="btn btn-default">
-  							<a href="/delete/${item.code()}">Delete</a>	
+  							<a href="/delete/${item.code}">Delete</a>	
   							</button>
 					</td>
 				</tr>
