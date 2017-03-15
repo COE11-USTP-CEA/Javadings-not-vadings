@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html>
-<title>Pick&Pack</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="w3-black-theme.css">
-<link rel="stylesheet" href="font-awesome.min.css">
-<body id="myPage">
-
-<!-- Side Navigation on click -->
-<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  <a href="#">Link 4</a>
-  <a href="#">Link 5</a>
-</nav>
-
-<!-- Navbar -->
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-opennav w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="/" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>${title}</a>
-  <a href="/add" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add items</a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Delete items</a>
-  
-  <a href="/testinglang" class="w3-bar-item w3-button w3-hide-small w3-hover-white">View Items</a>
- <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
-  </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
- </div>
+<#include "header.ftl">
+<body>
+<#include "navbar.ftl">
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
@@ -138,4 +106,4 @@
 </div>
 
 </body>
-</html>
+
