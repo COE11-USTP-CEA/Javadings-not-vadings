@@ -2,7 +2,7 @@ package com.sample.sparkdemo.model;
 import java.util.ArrayList;
 
 public class Item {
-	String name, code;
+	public String name, code;
 
 	// public static ArrayList<Item> items = new ArrayList<Item>();
 
