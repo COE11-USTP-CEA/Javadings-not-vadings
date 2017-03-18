@@ -1,3 +1,1 @@
-# Javadings Not Vadings
-A simple inventory webapp
-
+#A SIMPLE ITEM INVENTORY WEB APP
