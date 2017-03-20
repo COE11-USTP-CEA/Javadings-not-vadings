@@ -30,6 +30,12 @@ public class MainNgaClass {
             
             return render(model, "landing.ftl");
         });
+        
+        get("/about", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("title", "About Us");
+            return render(model, "about.ftl");
+        });
     
 
         get("/add", (request, response) -> {
