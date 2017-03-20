@@ -43,9 +43,10 @@
 #### Visit [Maven](http://maven.apache.org/install.html) for more info
 
 ### How to run
-Open cmd and go to the folder containing the repository
+1. Open cmd and go to the folder containing the repository
 Type in `mvn compile` when it is compiled successfully, type `mvn exec:java`
-      
+
+2. Open your browser and type in `localhost:4567`       
 
 ### Team Members
 - Pearl Dianne Cunada
