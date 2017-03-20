@@ -97,6 +97,32 @@ public class MainNgaClass {
             model.put("item", item);
             return render(model, "deleted.ftl");
         });
+        
+        get("/edit/:code", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.params(":code");
+            Item item = inventory.findItemByCode(code);
+            
+            model.put("title", "Edit Item");
+            model.put("item", item);
+            return render(model, "edit.ftl");
+        });
+        
+        post("/edit", (request,response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.queryParams("code");
+            String name = request.queryParams("name");
+
+            Item item = inventory.updateItemByCode(code,name);
+            // Item item = inventory.findItemByCode(code);
+
+
+            model.put("title", "Item Updated");
+            model.put("item", item);
+            // response.redirect("/show/"+code);
+            // return "";
+            return render(model, "show.ftl");
+        });
 
 
 
