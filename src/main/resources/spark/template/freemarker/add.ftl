@@ -2,7 +2,6 @@
 <#include "header.ftl">
 
 <body>
-
 <#include "navbar.ftl">
 
 <div class="container">
