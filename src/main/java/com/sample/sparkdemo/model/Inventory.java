@@ -16,6 +16,17 @@ public class Inventory {
 	public void add(Item item){
 		inventory.add(item);
 	}
+	
+	public Item updateItemByCode(String code, String name){
+		for (Item item : inventory ) {
+			if ( code.equals(item.code) ) {
+				item.setName(name);
+				return item;
+			}
+		};
+		return null;
+	
+	}
 
 
 	public Item deleteItemByCode(String code){
