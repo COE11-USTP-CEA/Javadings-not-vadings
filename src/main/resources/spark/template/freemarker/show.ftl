@@ -1,30 +1,32 @@
+<#include "head.ftl">
 <#include "header.ftl">
 
 <body>
+
 <#include "navbar.ftl">
 
-<div class="text-center">
-<h1>You have just added a new item ${item}</h1>
-</div>
-
-
+<div class="container">
 <div class="row jumbotron">
+
+
   <div class="col-md-4"></div>
   <div class="col-md-4">
     
-<h2>Item code: ${item.code}</h2>
-<h2>Item Name: ${item.name}</h2>
+<h2>Item code:<h3>${item.code}</h3></h2>
+<br>
+<h2>Item Name:<h3>${item.name}</h3></h2>
+<br>
 
-<div class="btn-group" role="group" aria-label="...">
+<div class="btn-group" role="group">
   
-  	<button type="button" class="btn btn-default">
-  		<a href="/">
-  			Back to Homepage
-  		</a>
-  	</button>
+    <button type="button" class="btn btn-default">
+      <a href="/">
+        Back to Homepage
+      </a>
+    </button>
 </div>
 
-<div class="btn-group" role="group" aria-label="...">
+<div class="btn-group" role="group">
   
     <button type="button" class="btn btn-default">
       <a href="/list">
@@ -38,5 +40,7 @@
   <div class="col-md-4"></div>
 
 </div>
+</div>
 
 </body>
+</html>
