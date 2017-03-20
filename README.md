@@ -14,7 +14,7 @@
 > - View existing items in the inventory
 
 
-How to install Maven
+### How to install Maven
 
 > - Download and install java here
 
@@ -39,23 +39,20 @@ How to install Maven
       java
       javac
       mvn -v
-Visit [Maven](http://maven.apache.org/install.html) for more info
 
-##Routes
+#### Visit [Maven](http://maven.apache.org/install.html) for more info
 
-      localhost:4567 - landing page
-      localhost:4567/add - adding item info form
-      localhost:4567/view - view 
-      localhost:4567/about - team informations
-      localhost:4567/delete - deleteitem form
+### How to run
+Open cmd and go to the folder containing the repository
+Type in `mvn compile` when it is compiled successfully, type `mvn exec:java`
       
 
-##Team Members
-> Jose Stephen Pena
+## Team Members
+> Jose Stephen Peña
 > Pearl Dianne Cunada
 > Aia Mae Bagas
 > Jason Mabanta
-> May Brick Manuel 
+> Mae Brick Manuel 
 
 
 
