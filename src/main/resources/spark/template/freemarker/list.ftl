@@ -1,7 +1,5 @@
-
 <#include "header.ftl">
-
-
+<#include "head.ftl">
 <body>
 <#include "navbar.ftl">
 
@@ -25,14 +23,19 @@
 					<td>${item.code}</td>
 					<td>${item.name}</td>
 					<td>
-  							<button type="button" class="btn btn-default">
+  							<button type="submit" class="btn btn-default">
   							<a href="/show/${item.code}">Show</a>	
   							</button>
 						</div>
 					</td>
 					<td>
-  							<button type="button" class="btn btn-default">
+  							<button type="submit" class="btn btn-default">
   							<a href="/delete/${item.code}">Delete</a>	
+  							</button>
+					</td>
+					<td>
+  							<button type="submit" class="btn btn-default">
+  							<a href="/edit/${item.code}">Edit</a>	
   							</button>
 					</td>
 				</tr>
@@ -40,7 +43,7 @@
 			</#list>
 		</tbody>	
 	</table>
-
+		<a href="/add">+ Add an Item</a>
   </div>
 
   <div class="col-md-2"></div>
