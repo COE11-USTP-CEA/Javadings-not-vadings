@@ -47,12 +47,12 @@ Open cmd and go to the folder containing the repository
 Type in `mvn compile` when it is compiled successfully, type `mvn exec:java`
       
 
-## Team Members
-> Jose Stephen Peña
-> Pearl Dianne Cunada
-> Aia Mae Bagas
-> Jason Mabanta
-> Mae Brick Manuel 
+### Team Members
+- Pearl Dianne Cunada
+- Aia Mae Bagas
+- Jason Mabanta
+- Mae Brick Manuel 
+- Jose Stephen Peña
 
 
 
