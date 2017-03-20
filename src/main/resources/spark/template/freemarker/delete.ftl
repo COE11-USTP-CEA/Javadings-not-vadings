@@ -1,14 +1,15 @@
 <#include "header.ftl">
+<#include "head.ftl">
 
 <body>
 <#include "navbar.ftl">
 
 
+<div class="row jumbotron">
   <div class="text-center">
     <h1>You are about to delete: ${item.name}</h1>
   </div>
 
-<div class="row jumbotron">
   <div class="col-md-4"></div>
   <div class="col-md-4">
     
@@ -24,7 +25,7 @@
 
 
 
-<div class="btn-group" role="group" aria-label="...">
+<div class="btn-group" role="group">
   
     <button type="button" class="btn btn-default">
       <a href="/list">
